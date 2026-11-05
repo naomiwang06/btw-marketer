@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>不務正業行銷人｜Naomi 的工作以外作品集</title>
+  <meta name="description" content="台灣自由接案行銷人 Naomi，放工作以外的好玩作品、小工具和提示詞的地方。">
+  <meta name="theme-color" content="#FFF7DF">
+  <!-- 社群分享預覽圖（FB / Threads / LINE 貼連結時看到的）。網站上線後，把下面 og:image 換成完整網址效果最好 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="不務正業行銷人">
+  <meta property="og:description" content="Naomi 放工作以外作品、工具與提示詞的地方。">
+  <meta property="og:image" content="assets/img/og.jpg">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Huninn&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#works">跳到主要內容</a>
+
+  <header class="site-header" id="header">
+    <a class="brand" href="#hero" aria-label="回到頁首">
+      <img src="assets/img/logo.webp" alt="" width="44" height="44">
+      <span class="brand__name">不務正業行銷人</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="主選單"></nav>
+  </header>
+
+  <main>
+    <section class="section hero" id="hero" data-theme="cream">
+      <div class="hero__deco" aria-hidden="true">
+        <span class="sun"></span>
+        <span class="ray ray--1"></span><span class="ray ray--2"></span><span class="ray ray--3"></span>
+      </div>
+      <div class="hero__inner">
+        <div class="hero__text">
+          <p class="hero__kicker" id="heroKicker"></p>
+          <h1 class="hero__title" id="heroTitle"></h1>
+          <p class="hero__intro" id="heroIntro"></p>
+          <p class="hero__byline" id="heroByline"></p>
+          <div class="hero__buttons" id="heroButtons"></div>
+        </div>
+        <img class="hero__logo" id="heroLogo" src="assets/img/logo.webp" alt="不務正業的文案 BTW. by the way 標誌" width="420" height="420" fetchpriority="high">
+      </div>
+      <p class="scroll-cue" aria-hidden="true">往下滑 ↓</p>
+    </section>
+
+    <section class="section" id="works" data-theme="yellow" aria-labelledby="worksTitle">
+      <div class="section__head">
+        <h2 class="section__title" id="worksTitle"></h2>
+        <p class="section__sub" id="worksSub"></p>
+      </div>
+      <div class="wall" id="wall"></div>
+    </section>
+
+    <section class="section" id="tools" data-theme="navy" aria-labelledby="toolsTitle">
+      <div class="section__head">
+        <h2 class="section__title" id="toolsTitle"></h2>
+        <p class="section__sub" id="toolsSub"></p>
+      </div>
+      <h3 class="subhead" id="toolsHeading"></h3>
+      <div class="tool-grid" id="toolGrid"></div>
+      <h3 class="subhead" id="promptsHeading"></h3>
+      <div class="prompt-grid" id="promptGrid"></div>
+    </section>
+  </main>
+
+  <footer class="section footer" id="contact" data-theme="yellow">
+    <h2 class="footer__headline" id="footHeadline"></h2>
+    <p class="footer__text" id="footText"></p>
+    <ul class="socials" id="socials"></ul>
+    <p class="footer__copy" id="footCopy"></p>
+  </footer>
+
+  <noscript><p class="notice">這個網站需要開啟 JavaScript 才能顯示內容喔。</p></noscript>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/main.js"></script>
+</body>
+</html>

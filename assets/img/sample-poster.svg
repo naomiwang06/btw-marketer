@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="範例圖片：BTW 對話框">
+  <rect width="800" height="1000" fill="#FBB704"/>
+  <circle cx="560" cy="250" r="210" fill="#FFF7DF"/>
+  <g stroke="#062C72" stroke-width="22" stroke-linecap="round" fill="none">
+    <path d="M150 140 L190 220"/><path d="M250 90 L270 190"/><path d="M80 260 L170 300"/>
+  </g>
+  <path d="M120 470 Q120 360 260 360 H620 Q740 360 740 480 V640 Q740 760 620 760 H400 L270 860 L290 760 H250 Q120 760 120 640 Z" fill="#fff" stroke="#062C72" stroke-width="14" stroke-linejoin="round"/>
+  <text x="430" y="600" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-style="italic" font-size="190" fill="#062C72">BTW.</text>
+  <path d="M250 910 Q400 870 550 910 T760 900" stroke="#062C72" stroke-width="16" stroke-linecap="round" fill="none"/>
+</svg>

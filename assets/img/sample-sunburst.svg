@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="範例圖片：太陽放射線">
+  <rect width="800" height="600" fill="#062C72"/>
+  <g stroke="#FBB704" stroke-width="26" stroke-linecap="round">
+    <path d="M400 70 V140"/><path d="M190 140 L240 190"/><path d="M610 140 L560 190"/>
+    <path d="M110 300 H180"/><path d="M690 300 H620"/>
+  </g>
+  <circle cx="400" cy="330" r="130" fill="#FBB704"/>
+  <path d="M60 520 Q230 440 400 520 T740 520" stroke="#FFF7DF" stroke-width="20" stroke-linecap="round" fill="none"/>
+</svg>
