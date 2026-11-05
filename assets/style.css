@@ -30,6 +30,7 @@ body {
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { font-weight: 700; }
 :focus-visible { outline: 3px dashed currentColor; outline-offset: 3px; border-radius: 6px; }
 
 .skip { position: absolute; left: 8px; top: -60px; background: var(--navy); color: var(--cream); padding: 8px 14px; border-radius: 10px; z-index: 100; }
@@ -51,7 +52,7 @@ h1, h2, h3, p { margin: 0; }
   box-shadow: 4px 4px 0 var(--navy);
   will-change: transform;
 }
-.brand { display: flex; align-items: center; gap: 8px; text-decoration: none; font-family: var(--font-display); font-size: 1.05rem; }
+.brand { display: flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 700; font-family: var(--font-display); font-size: 1.05rem; }
 .brand img { width: 44px; height: 44px; object-fit: contain; }
 .brand__name { display: none; }
 .nav { display: flex; gap: 2px; }
@@ -72,12 +73,12 @@ h1, h2, h3, p { margin: 0; }
 .section__head { max-width: 1100px; margin: 0 auto 36px; }
 .section__title {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 700;
   font-size: clamp(2rem, 7.5vw, 3.6rem);
   line-height: 1.2;
 }
 .section__sub { margin-top: 10px; font-size: 1.1rem; opacity: .85; }
-.subhead { max-width: 1100px; margin: 0 auto 20px; font-family: var(--font-display); font-weight: 400; font-size: 1.6rem; }
+.subhead { max-width: 1100px; margin: 0 auto 20px; font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; }
 .subhead:not(:first-of-type) { margin-top: 56px; }
 
 /* 標題逐字顯現 */
@@ -94,7 +95,7 @@ h1, h2, h3, p { margin: 0; }
 .hero__logo { height: auto; width: min(44vw, 190px); justify-self: center; grid-row: 1; filter: drop-shadow(0 8px 0 rgba(6, 44, 114, .08)); }
 .hero__kicker { font-family: var(--font-display); font-size: 1.05rem; letter-spacing: .08em; }
 .hero__title {
-  font-family: var(--font-display); font-weight: 400;
+  font-family: var(--font-display); font-weight: 700;
   font-size: clamp(3rem, 15.5vw, 7.4rem);
   line-height: 1.12; margin: 6px 0 14px;
 }
@@ -169,7 +170,7 @@ h1, h2, h3, p { margin: 0; }
 .card__body { padding: 16px 18px 18px; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
 .tag { font-size: .78rem; font-weight: 700; padding: 1px 10px; border-radius: 999px; background: var(--yellow); color: var(--navy); border: 2px solid var(--navy); line-height: 1.5; }
-.card__title { font-family: var(--font-display); font-weight: 400; font-size: 1.25rem; line-height: 1.4; }
+.card__title { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; line-height: 1.4; }
 .card__note { margin-top: 6px; font-size: .96rem; opacity: .85; }
 .card__link { display: inline-block; margin-top: 10px; font-weight: 700; font-size: .92rem; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .empty { text-align: center; padding: 30px 0; font-family: var(--font-display); font-size: 1.2rem; }
@@ -182,10 +183,10 @@ h1, h2, h3, p { margin: 0; }
 .tool { display: flex; flex-direction: column; text-decoration: none; transition: transform .2s, box-shadow .2s; }
 .tool:hover { transform: translate(-2px, -2px); box-shadow: 9px 9px 0 var(--shadow); }
 .tool__emoji { font-size: 2rem; line-height: 1; }
-.tool__name { margin-top: 8px; font-family: var(--font-display); font-size: 1.3rem; }
+.tool__name { font-weight: 700; margin-top: 8px; font-family: var(--font-display); font-size: 1.3rem; }
 .tool__note { margin-top: 4px; font-size: .95rem; opacity: .85; flex: 1; }
 .tool__go { margin-top: 12px; font-weight: 700; font-size: .92rem; }
-.prompt__title { font-family: var(--font-display); font-weight: 400; font-size: 1.3rem; }
+.prompt__title { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; }
 .prompt__note { margin-top: 4px; font-size: .95rem; opacity: .85; }
 .prompt__code {
   margin: 12px 0 0; padding: 12px 14px; background: var(--cream); border: 2px dashed var(--navy); border-radius: 14px;
@@ -201,7 +202,7 @@ h1, h2, h3, p { margin: 0; }
 
 /* ===== 頁尾 ===== */
 .footer { text-align: center; padding-top: 88px; padding-bottom: calc(56px + env(safe-area-inset-bottom)); }
-.footer__headline { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.4rem, 11vw, 5.5rem); line-height: 1.2; }
+.footer__headline { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.4rem, 11vw, 5.5rem); line-height: 1.2; }
 .footer__text { margin: 12px auto 0; max-width: 30em; font-size: 1.1rem; }
 .socials { list-style: none; margin: 30px auto 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
 .socials a { display: inline-block; text-decoration: none; font-weight: 700; padding: 10px 18px; border-radius: 999px; background: var(--navy); color: var(--cream); border: 3px solid var(--navy); box-shadow: 4px 4px 0 var(--cream); transition: translate .2s, box-shadow .2s; }
@@ -211,4 +212,22 @@ h1, h2, h3, p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition-duration: .01ms !important; }
+}
+
+/* ===== 自我介紹頁 ===== */
+.about { min-height: 80svh; display: flex; align-items: center; }
+.about__inner { max-width: 1100px; margin: 0 auto; width: 100%; display: grid; gap: 28px; align-items: center; }
+.about__photo { width: min(60vw, 260px); height: auto; justify-self: center; border: 3px solid var(--navy); border-radius: 50%; background: var(--white); padding: 16px; box-shadow: 6px 6px 0 var(--yellow); }
+.about__title { margin: 4px 0 12px; }
+.about__lead { font-size: clamp(1.15rem, 4.4vw, 1.5rem); font-weight: 700; }
+.about__body { margin-top: 14px; display: grid; gap: 10px; max-width: 34em; }
+.about .hero__buttons { margin-top: 24px; }
+.nav a[aria-current="page"] { background: var(--navy); color: var(--cream); }
+.facts { max-width: 1100px; margin: 0 auto; display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); padding-right: 8px; }
+.fact { background: var(--white); color: var(--navy); border: 3px solid var(--navy); border-radius: 22px; box-shadow: 6px 6px 0 var(--shadow); padding: 16px 18px; display: flex; flex-direction: column; gap: 2px; }
+.fact__label { font-size: .85rem; font-weight: 700; opacity: .7; }
+.fact__value { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; }
+@media (min-width: 860px) {
+  .about__inner { grid-template-columns: 300px 1fr; gap: 56px; }
+  .about__photo { width: 100%; }
 }

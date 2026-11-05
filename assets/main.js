@@ -118,9 +118,56 @@
     });
   }
 
+  const PAGE = document.body.dataset.page || 'home';
   function renderNav(items = []) {
     const nav = $('#nav');
-    items.forEach((n) => { const a = el('a', null, n.label); a.href = n.href || '#'; nav.appendChild(a); });
+    // 在其他頁時，#works 這類站內錨點要帶回首頁
+    const fix = (h) => (PAGE !== 'home' && h && h.startsWith('#') ? 'index.html' + h : h || '#');
+    $('.brand').href = PAGE === 'home' ? '#hero' : 'index.html';
+    items.forEach((n) => {
+      const a = el('a', null, n.label);
+      a.href = fix(n.href);
+      if (PAGE === 'about' && n.href === 'about.html') a.setAttribute('aria-current', 'page');
+      nav.appendChild(a);
+    });
+  }
+
+  /* ---------- 渲染：自我介紹頁 ---------- */
+  function renderAbout(a = {}) {
+    $('#aboutKicker').textContent = a.kicker || '';
+    $('#aboutTitle').textContent = a.title || '關於我';
+    $('#aboutLead').textContent = a.lead || '';
+    const body = $('#aboutBody');
+    (a.paragraphs || []).forEach((t) => body.appendChild(el('p', null, t)));
+    const photo = $('#aboutPhoto');
+    const src = safeUrl(a.photo);
+    if (src) { photo.src = src; photo.alt = a.photoAlt || ''; }
+    const btns = $('#aboutButtons');
+    (a.buttons || []).forEach((b, i) => {
+      const x = el('a', 'btn' + (i ? ' btn--ghost' : ''), b.label);
+      x.href = (b.href || '#').startsWith('#') ? 'index.html' + b.href : b.href || '#';
+      btns.appendChild(x);
+    });
+
+    $('#aboutDoesTitle').textContent = a.doesTitle || '';
+    const does = $('#aboutDoes');
+    (a.does || []).forEach((d) => {
+      const c = el('div', 'tool card-item');
+      c.appendChild(el('span', 'tool__emoji', d.emoji || '✨'));
+      c.appendChild(el('span', 'tool__name', d.title));
+      c.appendChild(el('span', 'tool__note', d.note || ''));
+      does.appendChild(c);
+    });
+    $('#aboutFactsTitle').textContent = a.factsTitle || '';
+    const facts = $('#aboutFacts');
+    (a.facts || []).forEach((f) => {
+      const c = el('div', 'fact card-item');
+      c.appendChild(el('span', 'fact__label', f.label));
+      c.appendChild(el('span', 'fact__value', f.value));
+      facts.appendChild(c);
+    });
+    if (!(a.does || []).length) { $('#aboutDoesTitle').remove(); does.remove(); }
+    if (!(a.facts || []).length) { $('#aboutFactsTitle').remove(); facts.remove(); }
   }
 
   /* ---------- 渲染：卡片 ---------- */
@@ -293,6 +340,7 @@
   /* ---------- 渲染：頁尾 ---------- */
   function renderFooter(f = {}) {
     if (f.id) $('#contact').id = f.id;
+    if (f.id && PAGE !== 'home') $('#contact').id = 'contact';
     $('#footHeadline').textContent = f.headline || '';
     $('#footText').textContent = f.text || '';
     const ul = $('#socials');
@@ -361,6 +409,7 @@
 
     if (reduceMotion) return;
 
+    if ($('#hero')) {
     /* 首屏：標題 text reveal */
     const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
     const lines = document.querySelectorAll('.hero__line');
@@ -391,6 +440,7 @@
     /* 首屏裝飾：捲動時輕微視差 */
     gsap.to('.sun', { yPercent: 25, ease: 'none', scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true } });
     gsap.to('.ray', { yPercent: -60, ease: 'none', scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true } });
+    }
 
     /* 區塊標題：進場時逐字顯現 */
     document.querySelectorAll('.section__title, .footer__headline').forEach((h) => {
@@ -439,9 +489,14 @@
       if (meta) meta.content = data.site.description;
     }
     renderNav(data.nav);
-    renderHero(data.hero);
-    renderWorks(data.works);
-    renderTools(data.tools);
+    if (PAGE === 'about') {
+      if (data.about && data.about.pageTitle) document.title = data.about.pageTitle;
+      renderAbout(data.about);
+    } else {
+      renderHero(data.hero);
+      renderWorks(data.works);
+      renderTools(data.tools);
+    }
     renderFooter(data.footer);
 
     setTheme('cream', true);
