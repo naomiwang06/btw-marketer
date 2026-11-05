@@ -47,6 +47,18 @@
     "empty": "還沒放東西進來，先讓我再不務一下正業。",
     "items": [
       {
+        "title": "動物朋友心理測驗",
+        "note": "測測看你是哪種動物，跟你最合拍的又是誰？（說明文字請改成你的版本）",
+        "image": "assets/img/quiz-animal-friend.svg",
+        "alt": "藍色動物腳印在黃色圓形上",
+        "ratio": "4/3",
+        "url": "https://animal-friend-quiz.naomi06.chatgpt.site",
+        "tags": [
+          "心理測驗",
+          "互動"
+        ]
+      },
+      {
         "title": "（範例）貼上 YouTube 連結就長這樣",
         "note": "只要貼網址，網站會自動變成影片卡片，點一下才載入，手機不卡。",
         "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="動物朋友心理測驗封面：腳印">
+  <rect width="800" height="600" fill="#FFF7DF"/>
+  <circle cx="400" cy="300" r="250" fill="#FBB704"/>
+  <g fill="#062C72">
+    <ellipse cx="400" cy="360" rx="115" ry="95"/>
+    <ellipse cx="260" cy="250" rx="48" ry="62" transform="rotate(-25 260 250)"/>
+    <ellipse cx="350" cy="190" rx="46" ry="62" transform="rotate(-8 350 190)"/>
+    <ellipse cx="450" cy="190" rx="46" ry="62" transform="rotate(8 450 190)"/>
+    <ellipse cx="540" cy="250" rx="48" ry="62" transform="rotate(25 540 250)"/>
+  </g>
+  <g stroke="#062C72" stroke-width="18" stroke-linecap="round"><path d="M90 90 L130 150"/><path d="M700 90 L660 150"/><path d="M60 300 H120"/><path d="M740 300 H680"/></g>
+</svg>
