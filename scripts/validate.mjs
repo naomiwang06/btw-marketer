@@ -17,6 +17,7 @@ const isStr = (v) => typeof v === 'string' && v.trim() !== '';
 need(data.hero && isStr(data.hero.intro), 'hero.intro（一句自介）不能是空的');
 need(data.hero && Array.isArray(data.hero.titleLines) && data.hero.titleLines.length > 0, 'hero.titleLines 要是文字陣列');
 
+need(data.about && isStr(data.about.title), 'about.title 不能是空的');
 const localFile = (p) => isStr(p) && !/^[a-z]+:/i.test(p) && !p.startsWith('//');
 (data.works?.items ?? []).forEach((it, i) => {
   const n = `works.items 第 ${i + 1} 筆`;

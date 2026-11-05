@@ -99,6 +99,13 @@ Naomi 放「工作以外作品」的個人網站：好玩的影片 / 圖片卡�
 ```
 （`mailto:你的信箱` 可以做成寄信按鈕。目前的網址都是**佔位用**，記得換掉。）
 
+### 改「關於我」頁（about.html）
+內容在 `content.json` 的 `about`：
+- `title` 標題、`lead` 一句話介紹、`paragraphs` 內文（每個項目是一段，可以增減）
+- `photo` 換成你的照片（把照片放進 `assets/img/`，例如 `"assets/img/me.jpg"`，會顯示成圓形）
+- `does` 是「我平常在做」的卡片，`facts` 是「快速認識我」的小卡，都可以自己增減
+- 目前所有文字都是**佔位**，請換成你自己的
+
 ### 換上方選單、各區塊標題
 `nav` 是頁首選單，`works.title` / `tools.title` 等是各區塊的標題和說明，都在同一個檔案裡改。
 
@@ -124,7 +131,8 @@ python3 -m http.server 8000
 ## 五、專案結構
 
 ```
-├── index.html            頁面骨架
+├── index.html            首頁骨架
+├── about.html            自我介紹頁骨架
 ├── content.json          ★ 所有內容都在這裡
 ├── assets/
 │   ├── style.css         樣式

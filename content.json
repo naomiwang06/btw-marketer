@@ -1,28 +1,46 @@
 {
   "_說明": "這個檔案是整個網站的內容。改完存檔、推上 GitHub，網站就會自動更新。以底線 _ 開頭的欄位只是備註，網站不會讀。詳細教學請看 README.md。",
-
   "site": {
     "title": "不務正業行銷人｜Naomi 的工作以外作品集",
     "description": "台灣自由接案行銷人 Naomi，放工作以外的好玩作品、小工具和提示詞的地方。"
   },
-
   "nav": [
-    { "label": "好玩的", "href": "#works" },
-    { "label": "工具箱", "href": "#tools" },
-    { "label": "找我", "href": "#contact" }
+    {
+      "label": "好玩的",
+      "href": "#works"
+    },
+    {
+      "label": "工具箱",
+      "href": "#tools"
+    },
+    {
+      "label": "關於我",
+      "href": "about.html"
+    },
+    {
+      "label": "找我",
+      "href": "#contact"
+    }
   ],
-
   "hero": {
     "kicker": "BTW. by the way",
-    "titleLines": ["不務正業", "行銷人"],
+    "titleLines": [
+      "不務正業",
+      "行銷人"
+    ],
     "intro": "白天幫品牌想文案，下班幫自己亂搞——這裡是我不務正業的成果展。",
     "byline": "Naomi｜台灣自由接案行銷人",
     "buttons": [
-      { "label": "看看我搞了什麼", "href": "#works" },
-      { "label": "拿走我的工具", "href": "#tools" }
+      {
+        "label": "看看我搞了什麼",
+        "href": "#works"
+      },
+      {
+        "label": "拿走我的工具",
+        "href": "#tools"
+      }
     ]
   },
-
   "works": {
     "title": "影片與好玩的東西",
     "subtitle": "工作以外的腦洞，想到就做，做完就放。",
@@ -32,7 +50,10 @@
         "title": "（範例）貼上 YouTube 連結就長這樣",
         "note": "只要貼網址，網站會自動變成影片卡片，點一下才載入，手機不卡。",
         "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "tags": ["影片", "範例"]
+        "tags": [
+          "影片",
+          "範例"
+        ]
       },
       {
         "title": "（範例）放圖片也可以",
@@ -40,14 +61,19 @@
         "image": "assets/img/sample-poster.svg",
         "alt": "黃色背景上的 BTW 對話框插圖",
         "ratio": "4/5",
-        "tags": ["圖片", "範例"]
+        "tags": [
+          "圖片",
+          "範例"
+        ]
       },
       {
         "title": "（範例）想連去別的地方？",
         "note": "不是 IG／YouTube／Threads 的網址，就會變成這種連結卡片。",
         "url": "#tools",
         "linkLabel": "跳去工具箱",
-        "tags": ["連結"]
+        "tags": [
+          "連結"
+        ]
       },
       {
         "title": "（範例）沒有影片，只有一張圖的靈感",
@@ -56,22 +82,27 @@
         "alt": "深藍背景上的黃色太陽",
         "ratio": "4/3",
         "url": "https://example.com/",
-        "tags": ["靈感"]
+        "tags": [
+          "靈感"
+        ]
       },
-
       {
         "_說明": "下面三張是 Instagram / Threads / 連結的範本，預設隱藏。換成你的網址後，把 hidden 改成 false 或直接刪掉這行就會顯示。",
         "title": "Instagram 貼文或 Reels 範本",
         "note": "貼 instagram.com/p/xxxx 或 instagram.com/reel/xxxx。",
         "url": "https://www.instagram.com/p/你的貼文代碼/",
-        "tags": ["IG"],
+        "tags": [
+          "IG"
+        ],
         "hidden": true
       },
       {
         "title": "Threads 貼文範本",
         "note": "貼 threads.com/@帳號/post/xxxx 這種網址。",
         "url": "https://www.threads.com/@你的帳號/post/你的貼文代碼",
-        "tags": ["Threads"],
+        "tags": [
+          "Threads"
+        ],
         "hidden": true
       },
       {
@@ -79,12 +110,13 @@
         "note": "cover 欄位可以換掉預設縮圖。",
         "url": "https://www.youtube.com/shorts/你的影片代碼",
         "cover": "assets/img/sample-poster.svg",
-        "tags": ["Shorts"],
+        "tags": [
+          "Shorts"
+        ],
         "hidden": true
       }
     ]
   },
-
   "tools": {
     "title": "工具、提示詞分享",
     "subtitle": "我自己真的在用的，順手分享給你。",
@@ -128,17 +160,92 @@
       }
     ]
   },
-
   "footer": {
     "id": "contact",
     "headline": "BTW，下次見！",
     "text": "想聊合作、想丟梗，或只是想打聲招呼，都可以找我。",
     "socials": [
-      { "label": "Instagram", "icon": "📸", "url": "https://www.instagram.com/" },
-      { "label": "YouTube", "icon": "▶️", "url": "https://www.youtube.com/" },
-      { "label": "Threads", "icon": "🧵", "url": "https://www.threads.com/" },
-      { "label": "Email", "icon": "✉️", "url": "mailto:hello@example.com" }
+      {
+        "label": "Instagram",
+        "icon": "📸",
+        "url": "https://www.instagram.com/"
+      },
+      {
+        "label": "YouTube",
+        "icon": "▶️",
+        "url": "https://www.youtube.com/"
+      },
+      {
+        "label": "Threads",
+        "icon": "🧵",
+        "url": "https://www.threads.com/"
+      },
+      {
+        "label": "Email",
+        "icon": "✉️",
+        "url": "mailto:hello@example.com"
+      }
     ],
     "copyright": "不務正業行銷人 Naomi"
+  },
+  "about": {
+    "_說明": "自我介紹頁（about.html）的內容。下面全部是佔位文字，請改成你自己的。",
+    "pageTitle": "關於我｜不務正業行銷人",
+    "kicker": "BTW. 順便自我介紹一下",
+    "title": "嗨，我是 Naomi",
+    "lead": "台灣自由接案行銷人，白天認真幫品牌說話，下班認真不務正業。",
+    "paragraphs": [
+      "（佔位文字）我做行銷、寫文案，也做社群與內容策略。接案久了發現，最好玩的點子常常不是客戶付錢請我想的。",
+      "（佔位文字）所以我開了這個地方，放那些工作以外的影片、小工具和提示詞。不一定有用，但一定有趣。"
+    ],
+    "photo": "assets/img/logo.webp",
+    "photoAlt": "不務正業的文案 BTW. 標誌",
+    "buttons": [
+      {
+        "label": "看看我搞了什麼",
+        "href": "#works"
+      },
+      {
+        "label": "跟我聊聊",
+        "href": "#contact"
+      }
+    ],
+    "doesTitle": "我平常在做",
+    "does": [
+      {
+        "emoji": "✍️",
+        "title": "文案與內容",
+        "note": "（範例）品牌文案、社群貼文、腳本。"
+      },
+      {
+        "emoji": "📣",
+        "title": "社群經營",
+        "note": "（範例）內容規劃、帳號經營、成效檢討。"
+      },
+      {
+        "emoji": "🧪",
+        "title": "不務正業實驗",
+        "note": "（範例）AI 工具、小遊戲、各種亂搞。"
+      }
+    ],
+    "factsTitle": "快速認識我",
+    "facts": [
+      {
+        "label": "所在地",
+        "value": "台灣"
+      },
+      {
+        "label": "身分",
+        "value": "自由接案行銷人"
+      },
+      {
+        "label": "最近在迷",
+        "value": "（佔位）請填你最近迷的東西"
+      },
+      {
+        "label": "合作方式",
+        "value": "（佔位）請填如何聯絡與接案方式"
+      }
+    ]
   }
 }
